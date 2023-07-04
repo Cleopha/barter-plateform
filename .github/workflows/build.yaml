@@ -1,0 +1,21 @@
+name: Rust Build
+
+on:
+  push:
+    branches: ["master", "develop"]
+    paths:
+      - 'backend/**'
+  pull_request:
+    branches: ["master", "develop"]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build
+      working-directory: ./backend
+      run: cargo build --verbose
