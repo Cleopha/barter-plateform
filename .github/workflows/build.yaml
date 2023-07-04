@@ -19,3 +19,7 @@ jobs:
     - name: Build
       working-directory: ./backend
       run: cargo build --verbose
+
+    - name: Generate Documentation
+      working-directory: ./backend
+      run: cargo doc
