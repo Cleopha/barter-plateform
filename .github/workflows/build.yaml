@@ -2,11 +2,11 @@ name: Rust Build
 
 on:
   push:
-    branches: ["master", "develop"]
+    branches: ["main", "develop"]
     paths:
       - 'backend/**'
   pull_request:
-    branches: ["master", "develop"]
+    branches: ["main", "develop"]
 
 jobs:
   build:
